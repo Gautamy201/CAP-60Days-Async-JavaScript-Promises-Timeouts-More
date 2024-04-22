@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>stopwatch</title>
+  </head>
+  <body>
+    <section>
+      <div class="stopwatch_contener">
+        <div class="stopwatch_header">
+          <div class="timer box" id="active">
+            <div>
+              <i class="ri-hourglass-2-line"></i>
+              <p>timer</p>
+            </div>
+          </div>
+          <div class="stopwatch box">
+            <div>
+              <i class="ri-timer-line"></i>
+              <p>stopwatch</p>
+            </div>
+          </div>
+        </div>
+        <!-- -------------------- timer ---------------- -->
+
+        <div class="timer_contents">
+          <div class="main_contener">
+            <div class="time-status-bar">
+              <span></span>
+            </div>
+            <div class="time_boxes input-sec">
+              <form action="#">
+                <p>
+                  <input
+                    type="number"
+                    id="Input-hour"
+                    placeholder="h"
+                    autocomplete="off"
+                    onkeyup="handleInput()"
+                  />
+                  <span>h</span>
+                </p>
+                <p>
+                  <input
+                    type="number"
+                    id="Input-min"
+                    placeholder="m"
+                    autocomplete="off"
+                    onkeyup="handleInput()"
+                  />
+                  <span>m</span>
+                </p>
+                <p>
+                  <input
+                    type="number"
+                    id="Input-sec"
+                    placeholder="s"
+                    autocomplete="off"
+                    onkeyup="handleInput()"
+                  />
+                  <span>s</span>
+                </p>
+              </form>
+
+              <div class="timer_output">
+                <div class="time_box">
+                  <p id="timer-hr-box"><span id="timer-hr">00</span>h</p>
+                </div>
+                <div class="time_box">
+                  <p id="timer-min-box"><span id="timer-min">00</span>m</p>
+                </div>
+                <div class="time_box">
+                  <p><span id="timer-sec">00</span>s</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons_bar">
+            <div class="buttons">
+              <div class="start-stop_btn">
+                <button onclick="timerStart()" id="timer-start">start</button>
+                <button onclick="timerStop()" id="timer-stop">stop</button>
+              </div>
+              <button onclick="timerReset()" id="timer-restart">reset</button>
+            </div>
+            <div class="fullscreen_btn timer-btn">
+              <button onclick="openFullScreen()">
+                <i class="ri-fullscreen-line"></i>
+              </button>
+              <button id="sound"><i class="ri-volume-up-fill"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------- stopwatch ---------------- -->
+
+        <div class="stopwatch_contents">
+          <div class="main_contener">
+            <div class="time_boxes">
+              <div class="time_box">
+                <p id="hr-box"><span id="stw-hr">00</span>h</p>
+              </div>
+              <div class="time_box">
+                <p id="min-box"><span id="stw-min">00</span>m</p>
+              </div>
+              <div class="time_box">
+                <p><span id="stw-sec">00</span>s</p>
+              </div>
+              <div class="mini-time_box">
+                <p id="stw-mil_sec">00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons_bar">
+            <div class="buttons">
+              <div class="start-stop_btn">
+                <button class="start" onclick="stopWatchStart()">start</button>
+                <button class="stop" onclick="stopWatchStop()">stop</button>
+              </div>
+              <button onclick="stopWatchReset()">reset</button>
+            </div>
+            <div class="fullscreen_btn">
+              <button onclick="openFullScreen()">
+                <i class="ri-fullscreen-line"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
