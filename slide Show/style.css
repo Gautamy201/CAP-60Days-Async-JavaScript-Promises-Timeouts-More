@@ -1,0 +1,49 @@
+.slide-show_contener {
+  margin: 50px 100px;
+}
+.slide-show_panel {
+  border: 2px solid black;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.slide-show_panel img {
+  width: 100%;
+  height: 80vh;
+  display: none;
+}
+#active {
+  display: block;
+}
+.slide-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.slide-buttons button {
+  width: 130px;
+  height: 34px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+#next:active,
+#prev:active {
+  background-color: green;
+}
+#stop {
+  display: none;
+  background-color: red;
+}
+#start {
+  background-color: rgb(4, 145, 37);
+}
+#next,
+#prev {
+  background-color: rgb(22, 125, 235);
+}
